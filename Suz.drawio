@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:147.0) Gecko/20100101 Firefox/147.0" version="29.3.2">
+  <diagram name="Page-1" id="vYuN5nOhFHNhB9zcP2ke">
+    <mxGraphModel dx="2515" dy="799" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Fz635J49tFWDLtMXpUpR-2" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="User" vertex="1">
+          <mxGeometry height="200" width="300" x="-530" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-7" parent="Fz635J49tFWDLtMXpUpR-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;email (unique, required)&lt;br&gt;password_hash (required)&lt;br&gt;created_at&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="150" x="10" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-3" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Agent" vertex="1">
+          <mxGeometry height="200" width="290" x="-70" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-8" parent="Fz635J49tFWDLtMXpUpR-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;name (required)&lt;br&gt;description&lt;br&gt;&lt;div&gt;user_id (FK → User.id)&lt;br&gt;&lt;/div&gt;created_at&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="130" x="10" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-4" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Action" vertex="1">
+          <mxGeometry height="200" width="320" x="380" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-6" parent="Fz635J49tFWDLtMXpUpR-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;name (required)&lt;br&gt;category (enum: read, write, deploy, delete, external_api)&lt;br&gt;impact_level (enum: low, medium, high, irreversible)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="330" x="10" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-5" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Permission" vertex="1">
+          <mxGeometry height="200" width="320" x="380" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-9" parent="Fz635J49tFWDLtMXpUpR-5" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;agent_id (FK → Agent.id)&lt;br&gt;action_id (FK → Action.id)&lt;br&gt;scope&lt;br&gt;justification&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="310" x="10" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-17" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="-230" y="189.5" as="sourcePoint" />
+            <mxPoint x="-70" y="189.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-18" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="220" y="189.5" as="sourcePoint" />
+            <mxPoint x="380" y="189.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-19" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="80" y="520" as="sourcePoint" />
+            <mxPoint x="380" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-20" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="290" as="sourcePoint" />
+            <mxPoint x="80" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fz635J49tFWDLtMXpUpR-22" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;entryX=-0.014;entryY=0.085;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="410" y="290" as="sourcePoint" />
+            <mxPoint x="380.00000000000006" y="477" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
