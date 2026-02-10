@@ -7,25 +7,25 @@
         <mxCell id="Fz635J49tFWDLtMXpUpR-2" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="User" vertex="1">
           <mxGeometry height="200" width="300" x="-530" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="Fz635J49tFWDLtMXpUpR-7" parent="Fz635J49tFWDLtMXpUpR-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;email (unique, required)&lt;br&gt;password_hash (required)&lt;br&gt;created_at&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="Fz635J49tFWDLtMXpUpR-7" parent="Fz635J49tFWDLtMXpUpR-2" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;email (unique, not NULL)&lt;br&gt;password_hash&amp;nbsp;&lt;br&gt;created_at&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="100" width="150" x="10" y="20" as="geometry" />
         </mxCell>
         <mxCell id="Fz635J49tFWDLtMXpUpR-3" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Agent" vertex="1">
           <mxGeometry height="200" width="290" x="-70" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="Fz635J49tFWDLtMXpUpR-8" parent="Fz635J49tFWDLtMXpUpR-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;name (required)&lt;br&gt;description&lt;br&gt;&lt;div&gt;user_id (FK → User.id)&lt;br&gt;&lt;/div&gt;created_at&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="Fz635J49tFWDLtMXpUpR-8" parent="Fz635J49tFWDLtMXpUpR-3" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;name (not NULL)&lt;br&gt;description (text)&lt;div&gt;user_id (FK)&lt;/div&gt;created_at&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="110" width="130" x="10" y="20" as="geometry" />
         </mxCell>
         <mxCell id="Fz635J49tFWDLtMXpUpR-4" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Action" vertex="1">
           <mxGeometry height="200" width="320" x="380" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="Fz635J49tFWDLtMXpUpR-6" parent="Fz635J49tFWDLtMXpUpR-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;name (required)&lt;br&gt;category (enum: read, write, deploy, delete, external_api)&lt;br&gt;impact_level (enum: low, medium, high, irreversible)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="Fz635J49tFWDLtMXpUpR-6" parent="Fz635J49tFWDLtMXpUpR-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;name&amp;nbsp;&lt;br&gt;category (enum: read, write, deploy, delete, external_api)&lt;br&gt;impact_level (enum: low, medium, high, irreversible)&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="140" width="330" x="10" y="10" as="geometry" />
         </mxCell>
         <mxCell id="Fz635J49tFWDLtMXpUpR-5" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Permission" vertex="1">
           <mxGeometry height="200" width="320" x="380" y="440" as="geometry" />
         </mxCell>
-        <mxCell id="Fz635J49tFWDLtMXpUpR-9" parent="Fz635J49tFWDLtMXpUpR-5" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;agent_id (FK → Agent.id)&lt;br&gt;action_id (FK → Action.id)&lt;br&gt;scope&lt;br&gt;justification&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="Fz635J49tFWDLtMXpUpR-9" parent="Fz635J49tFWDLtMXpUpR-5" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;id (PK)&lt;br&gt;agent_id&lt;br&gt;action_id&amp;nbsp;&lt;br&gt;scope&lt;br&gt;justification&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="130" width="310" x="10" y="10" as="geometry" />
         </mxCell>
         <mxCell id="Fz635J49tFWDLtMXpUpR-17" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" value="">
